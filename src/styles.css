@@ -1,0 +1,394 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+input {
+  font-size: 2.5rem;
+  outline: none;
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  border-radius: 2.5rem;
+  border: 2px solid rgb(196, 196, 196);
+}
+/* HEADER SECTION */
+.header,
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+#teams-link {
+  font-size: 2rem;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  #teams-link {
+    font-size: 2.5rem;
+  }
+}
+
+/* SLIDER SECTION */
+.sliders_block {
+  height: 70rem;
+  background-position: center center !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  position: relative;
+}
+
+.sliders_block .caption {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  text-transform: uppercase;
+  width: 30rem;
+  padding: 2rem;
+}
+
+.sliders_block .caption p {
+  font-weight: 700;
+  font-size: 5rem;
+  margin-top: 1rem;
+}
+
+/* EMAIL SECTION */
+.email_block,
+.polls {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0 4rem;
+}
+.email_block input,
+.email_block p {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.email_block h1,
+.polls h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.email_block .error {
+  display: block;
+  color: red;
+}
+
+.email_block .success {
+  display: block;
+  color: green;
+}
+
+.email_block .no-error,
+.email_block .no-success {
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .email_block {
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+  .email_block input {
+    font-size: 2rem;
+  }
+
+  .email_block p {
+    font-size: 3rem;
+  }
+
+  .email_block input {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .email_block input {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+/* BLOCKS SECTION */
+
+.blocks {
+  margin-top: 2rem;
+}
+
+.blocks .blocks_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.blocks .blocks_content div {
+  position: relative;
+}
+.blocks .blocks_content a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+.blocks .blocks_content .block_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem 1rem;
+  color: #fff;
+  background: #000;
+  width: 50%;
+  display: none;
+}
+
+.blocks .blocks_content .block_head:hover > .block_title {
+  display: block;
+}
+
+.blocks .blocks_content .block_head:hover > a img {
+  filter: brightness(1);
+}
+.blocks .blocks_content #large {
+  width: 50%;
+}
+.blocks .blocks_content #medium {
+  width: 30%;
+}
+
+.blocks .blocks_content #small {
+  width: 20%;
+}
+
+@media screen and (max-width: 550px) {
+  .blocks .blocks_content #large {
+    width: 100%;
+  }
+
+  .blocks .blocks_content #medium {
+    width: 50%;
+  }
+
+  .blocks .blocks_content #small {
+    width: 50%;
+  }
+}
+/* POLLS SECTION */
+.polls p {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+.polls .polls_block {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  margin: 3rem 0;
+  cursor: pointer;
+}
+.polls .polls_block img {
+  width: 50%;
+}
+
+.polls .polls_block .polls_info {
+  margin-top: 2rem;
+}
+.polls .polls_block .polls_info p {
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .polls .polls_block {
+    flex-direction: column;
+    gap: 10rem;
+  }
+}
+
+/* INPUT FIELD SECTION */
+
+.input_block {
+  background-color: lightgrey;
+  text-align: center;
+  padding: 2rem;
+}
+
+.input_block .input_field {
+  margin: 1.5rem;
+  border-radius: 3rem;
+}
+@media screen and (max-width: 370px) {
+  .input_block .input_field {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .input_block .input_field {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  .input_block .input_field {
+    font-size: 0.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+/* ALL TEAMS SECTION */
+.teams_block {
+  padding: 3rem;
+}
+.teams_logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem 1rem;
+}
+
+.teams_logo a {
+  width: 25%;
+  object-fit: cover;
+  animation: animate 2s ease-in-out;
+}
+.teams_logo img {
+  width: 100%;
+}
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .teams_logo a {
+    width: 100%;
+  }
+}
+
+/* TEAM SECTION */
+.team_block {
+  display: flex;
+  border: 2px solid lightgray;
+  justify-content: space-between;
+  gap: 0;
+}
+.team_block .team_logo {
+  padding: 2rem;
+  height: 50%;
+}
+.team_block .intro {
+  border-left: 2px solid lightgray;
+  padding: 2.5rem;
+}
+
+.team_block .intro #team-name {
+  font-size: 3rem;
+}
+.team_block p {
+  margin-top: 2rem;
+  border-bottom: 2px solid lightgray;
+  padding-bottom: 2rem;
+  line-height: 1.5;
+  font-size: 2rem;
+}
+.players_block .player {
+  width: 25%;
+}
+
+.players_block img {
+  width: 100%;
+}
+.player h2 {
+  font-size: 2rem;
+}
+.players_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.player h2 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.team_block .intro #player_heading {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem 0;
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  .team_block {
+    flex-direction: column-reverse;
+  }
+
+  .team_block .intro #team-name {
+    font-size: 4rem;
+  }
+  .team_block p {
+    font-size: 2.5rem;
+  }
+  .players_block .player {
+    width: 40%;
+  }
+
+  .player h2 {
+    font-size: 3rem;
+  }
+  .players_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .player h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .players_block .player {
+    width: 50%;
+  }
+}
+
+/* FOOTER SECTION */
+.footer {
+  background-color: rgb(0, 0, 26);
+  margin: 0;
+  padding: 2rem;
+  color: #fff;
+}
+
+.footer h2 {
+  font-size: 2rem;
+  text-align: right;
+}
